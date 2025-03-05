@@ -7,6 +7,9 @@ WORKDIR /app
 # Copiar el código fuente y los archivos de configuración
 COPY . .
 
+# Otorgar permisos de ejecución al wrapper de Maven
+RUN chmod +x mvnw
+
 # Construir la aplicación con Maven
 RUN ./mvnw clean package -DskipTests
 
