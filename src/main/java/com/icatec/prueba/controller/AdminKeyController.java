@@ -9,7 +9,7 @@ public class AdminKeyController {
 
     @GetMapping()
     public ResponseBody validateKey(@RequestHeader("access-key") String accessKey) throws InterruptedException {
-        Thread.sleep(3000);//TODO: Para la prueba
+        //Thread.sleep(3000);//TODO: Para la prueba
 
         ResponseBody body = new ResponseBody();
         if(accessKey == null || !accessKey.equals("f94u7hf94funo8f49fuhbn429f832d983hjnd9283d")) {
